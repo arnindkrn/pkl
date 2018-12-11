@@ -15,29 +15,32 @@
 
       <!-- Navbar -->
       <ul class="navbar-nav ml-auto ml-md-0">
-       
-        <li class="nav-item dropdown no-arrow" style="padding-right: 10px;">
-          <a class="nav-link dropdown-toggle"  id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="fa-stack">
-                <i class="fa fa-bell" style="color: darkred;" ></i> 
-                <?php if ($this->admin_model->get_jatuh_tempo() > 0): ?>
-                  <?php echo $this->admin_model->get_jatuh_tempo() ?>
-                <?php endif ?>
-            </span>
-          </a>
-        </li>
+             
+              <li class="nav-item dropdown no-arrow" style="padding-right: 15px;">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa-stack">
+                      <i class="fa fa-bell" style="color: darkred; padding-left: 20px;" ></i> 
+                  </i>
+                  <sup style="color: darkred;"><?php if ($this->admin_model->get_jatuh_tempo() > 0): ?>
+                    <?php echo $this->admin_model->get_jatuh_tempo() ?>
+                  <?php endif ?></sup>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="<?php echo base_url('serahterima')?>" data-target="#notifModal">Lihat Semua Pemberitahuan</a>
+              </div>
+              </li>
 
-        <li class="nav-item dropdown no-arrow" >
-          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="fa-stack">
-                <i class="fa fa-user" style="color: darkred"></i>
-            </span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Keluar</a>
-          </div>
-        </li>
-      </ul>
+              <li class="nav-item dropdown no-arrow" >
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="fa-stack">
+                      <i class="fa fa-user" style="color: darkred"></i>
+                  </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Keluar</a>
+                </div>
+              </li>
+            </ul>
 
     </nav>
 
